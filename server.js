@@ -9,6 +9,7 @@ const indexRouter = require("./routes/index")
 const mongoose = require("mongoose")
 
 app.set("view engine", "ejs")
+app.set("view",__dirname+"/views")
 app.set("layout", "layouts/layouts")
 app.use(expressLayouts)
 app.use(express.static("public"))
@@ -24,3 +25,4 @@ app.use("/", indexRouter)
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log("server up and running on server 3000"))
+ 
