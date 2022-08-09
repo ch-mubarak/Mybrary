@@ -9,7 +9,7 @@ const indexRouter = require("./routes/index")
 const mongoose = require("mongoose")
 
 app.set("view engine", "ejs")
-app.set("view",__dirname+"/views")
+// app.set("views",__dirname+"/views")
 app.set("layout", "layouts/layouts")
 app.use(expressLayouts)
 app.use(express.static("public"))
