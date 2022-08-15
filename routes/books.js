@@ -47,8 +47,7 @@ router.post("/", async (req, res) => {
         saveCover(book, req.body.cover)
         const newBook = await book.save()
         res.redirect("/books")
-    } catch (err) {
-        console.log(err)
+    } catch{
         renderNewPage(res, book, true)
     }
 
