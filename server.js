@@ -15,7 +15,7 @@ app.set("view engine", "ejs")
 app.set("layout", "layouts/layouts")
 app.use(expressLayouts)
 app.use(express.static("public"))
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({extended:false,limit: '10mb'}))
 
 mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true})
 
