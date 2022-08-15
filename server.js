@@ -9,6 +9,7 @@ const mongoose = require("mongoose")
 
 const indexRouter = require("./routes/index")
 const authorRouter= require("./routes/authors")
+const bookRouter= require("./routes/books")
 
 app.set("view engine", "ejs")
 app.set("layout", "layouts/layouts")
@@ -25,6 +26,7 @@ db.once("open", () => console.log("Connected to mongoose"))
 
 app.use("/", indexRouter)
 app.use("/authors",authorRouter)
+app.use("/books",bookRouter)
 
 
 
